@@ -27,14 +27,14 @@
 			    <span class="icon-bar"></span>
 			    <span class="icon-bar"></span>
 			  </button>
-          <a class="navbar-brand" href="index.html">School name | Abacus Centre</a>
+          <a class="navbar-brand" href="{% url 'HomePage' %}">School name | Abacus Centre</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="{% url 'HomePage' %}">Home</a></li>
-            <li><a href="why">Why us</a></li>
-            <li><a href="#portfolio">Events</a></li>
-            <li><a href="#about">Our Team</a></li>
+            <li><a href="{% url 'whyUs' %}">Why us</a></li>
+            <li><a href="{% url 'events' %}">Events</a></li>
+            <li><a href="{% url 'staff' %}">Our Team</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
@@ -120,20 +120,20 @@
       <div class="row">
         <div class="col-lg-12">
           <ul id="portfolio-flters">
-            <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">All</li>
-            <li data-filter=".filter-app">Independance day</li>
-            <li data-filter=".filter-card">Dahi Handi</li>
-            <li data-filter=".filter-logo">Diwali</li>
-            <li data-filter=".filter-web">Christmas</li>
+            <li data-filter=".filter-ind, .filter-dahi, .filter-diw, .filter-chr" class="filter-active">All</li>
+            <li data-filter=".filter-ind">Independance day</li>
+            <li data-filter=".filter-dahi">Dahi Handi</li>
+            <li data-filter=".filter-diw">Diwali</li>
+            <li data-filter=".filter-chr">Christmas</li>
             <li data-filter=".filter-web">More</li>
           </ul>
         </div>
       </div>
 
       <div class="row" id="portfolio-wrapper">
-        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-ind">
           <a href="">
-            <img src="{% static 'img/portfolio/app1.jpg' %}" alt="">
+            <img src="{% static 'img/portfolio/ind1.jpg' %}" alt="">
             <div class="details">
               <h4>App 1</h4>
               <span>Alored dono par</span>
@@ -141,9 +141,9 @@
           </a>
         </div>
 
-        <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-ind">
           <a href="">
-            <img src="{% static 'img/portfolio/web2.jpg' %}" alt="">
+            <img src="{% static 'img/portfolio/ind2.jpg' %}" alt="">
             <div class="details">
               <h4>Web 2</h4>
               <span>Alored dono par</span>
@@ -151,9 +151,9 @@
           </a>
         </div>
 
-        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-ind">
           <a href="">
-            <img src="{% static 'img/portfolio/app3.jpg' %}" alt="">
+            <img src="{% static 'img/portfolio/ind3.jpg' %}" alt="">
             <div class="details">
               <h4>App 3</h4>
               <span>Alored dono par</span>
@@ -161,9 +161,9 @@
           </a>
         </div>
 
-        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-dahi">
           <a href="">
-            <img src="{% static 'img/portfolio/card1.jpg' %}" alt="">
+            <img src="{% static 'img/portfolio/dahi1.jpg' %}" alt="">
             <div class="details">
               <h4>Card 1</h4>
               <span>Alored dono par</span>
@@ -171,9 +171,9 @@
           </a>
         </div>
 
-        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-dahi">
           <a href="">
-            <img src="{% static 'img/portfolio/card2.jpg' %}" alt="">
+            <img src="{% static 'img/portfolio/dahi2.jpg' %}" alt="">
             <div class="details">
               <h4>Card 2</h4>
               <span>Alored dono par</span>
@@ -181,19 +181,11 @@
           </a>
         </div>
 
-        <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-          <a href="">
-            <img src="{% static 'img/portfolio/web3.jpg' %}" alt="">
-            <div class="details">
-              <h4>Web 3</h4>
-              <span>Alored dono par</span>
-            </div>
-          </a>
-        </div>
+        
 
-        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-diw">
           <a href="">
-            <img src="{% static 'img/portfolio/card3.jpg' %}" alt="">
+            <img src="{% static 'img/portfolio/diw1.jpg' %}" alt="">
             <div class="details">
               <h4>Card 3</h4>
               <span>Alored dono par</span>
@@ -201,15 +193,36 @@
           </a>
         </div>
 
-        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-diw">
           <a href="">
-            <img src="{% static 'img/portfolio/app2.jpg' %}" alt="">
+            <img src="{% static 'img/portfolio/diw2.jpg' %}" alt="">
             <div class="details">
               <h4>App 2</h4>
               <span>Alored dono par</span>
             </div>
           </a>
         </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-chr">
+          <a href="">
+            <img src="{% static 'img/portfolio/chr1.jpg' %}" alt="">
+            <div class="details">
+              <h4>Captain america</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-chr">
+          <a href="">
+            <img src="{% static 'img/portfolio/chr2.jpg' %}" alt="">
+            <div class="details">
+              <h4>Captain america</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
       </div>
     </div>
   </div>-->

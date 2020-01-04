@@ -1,0 +1,170 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" class=" js no-touch">
+
+
+<head>
+  <title>School Name</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/slick-team-slider.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+  <!--HEADER START-->
+  <div class="main-navigation navbar-fixed-top">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			  </button>
+          <a class="navbar-brand" href="{% url 'HomePage' %}">School name | Abacus Centre</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="{% url 'HomePage' %}">Home</a></li>
+            <li><a href="{% url 'whyUs' %}">Why us</a></li>
+            <li><a href="{% url 'events' %}">Events</a></li>
+            <li><a href="{% url 'staff' %}">Our Team</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--HEADER END-->
+
+
+  <div id="portfolio">
+    <div class="container">
+      <div class="page-title text-center">
+        <h1>Take a look at events organised at SVM</h1>
+        <p>Here we celebrete every festival to make your child know indian tradition <br>Outside students are also allowed </p>
+        <hr class="pg-titl-bdr-btm"></hr>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul id="portfolio-flters">
+            <li data-filter=".filter-ind, .filter-dahi, .filter-diw, .filter-chr" class="filter-active">All</li>
+            <li data-filter=".filter-ind">Independance day</li>
+            <li data-filter=".filter-dahi">Dahi Handi</li>
+            <li data-filter=".filter-diw">Diwali</li>
+            <li data-filter=".filter-chr">Christmas</li>
+            <li  data-filter=".filter-web"><a href="{% url 'whyUs' %}">More</a></li >
+          </ul>
+        </div>
+      </div>
+
+      <div class="row" id="portfolio-wrapper">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-ind">
+          <a href="">
+            <img src="{% static 'img/portfolio/ind1.jpg' %}" alt="">
+            <div class="details">
+              <h4>App 1</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-ind">
+          <a href="">
+            <img src="{% static 'img/portfolio/ind2.jpg' %}" alt="">
+            <div class="details">
+              <h4>Web 2</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-ind">
+          <a href="">
+            <img src="{% static 'img/portfolio/ind3.jpg' %}" alt="">
+            <div class="details">
+              <h4>App 3</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-dahi">
+          <a href="">
+            <img src="{% static 'img/portfolio/dahi1.jpg' %}" alt="">
+            <div class="details">
+              <h4>Card 1</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-dahi">
+          <a href="">
+            <img src="{% static 'img/portfolio/dahi2.jpg' %}" alt="">
+            <div class="details">
+              <h4>Card 2</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
+        
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-diw">
+          <a href="">
+            <img src="{% static 'img/portfolio/diw1.jpg' %}" alt="">
+            <div class="details">
+              <h4>Card 3</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-diw">
+          <a href="">
+            <img src="{% static 'img/portfolio/diw2.jpg' %}" alt="">
+            <div class="details">
+              <h4>App 2</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-chr">
+          <a href="">
+            <img src="{% static 'img/portfolio/chr1.jpg' %}" alt="">
+            <div class="details">
+              <h4>Captain america</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 portfolio-item filter-chr">
+          <a href="">
+            <img src="{% static 'img/portfolio/chr2.jpg' %}" alt="">
+            <div class="details">
+              <h4>Captain america</h4>
+              <span>Alored dono par</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

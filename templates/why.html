@@ -27,14 +27,14 @@
 			    <span class="icon-bar"></span>
 			    <span class="icon-bar"></span>
 			  </button>
-          <a class="navbar-brand" href="index.html">School name | Abacus Centre</a>
+          <a class="navbar-brand" href="{% url 'HomePage' %}">School name | Abacus Centre</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="{% url 'HomePage' %}">Home</a></li>
-            <li><a href="why">Why us</a></li>
-            <li><a href="#portfolio">Events</a></li>
-            <li><a href="#about">Our Team</a></li>
+            <li><a href="{% url 'whyUs' %}">Why us</a></li>
+            <li><a href="{% url 'events' %}">Events</a></li>
+            <li><a href="{% url 'staff' %}">Our Team</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>

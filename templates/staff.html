@@ -1,0 +1,106 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" class=" js no-touch">
+
+
+<head>
+  <title>School Name</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/slick-team-slider.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+  <!--HEADER START-->
+  <div class="main-navigation navbar-fixed-top">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			  </button>
+          <a class="navbar-brand" href="{% url 'HomePage' %}">School name | Abacus Centre</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="{% url 'HomePage' %}">Home</a></li>
+            <li><a href="{% url 'whyUs' %}">Why us</a></li>
+            <li><a href="{% url 'events' %}">Events</a></li>
+            <li><a href="{% url 'staff' %}">Our Team</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--HEADER END-->
+
+
+  <div id="portfolio" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="page-title text-center">
+          <h1>Here is our staff</h1>
+          <p>We have qualified staff with teaching certificate, They will teach your child everything that is needed to make him learn basic thisngs. </p>
+          <hr class="pg-titl-bdr-btm"></hr>
+        </div>
+        <div class="autoplay">
+          <div class="col-md-6">
+            <div class="team-info">
+              <div class="img-sec">
+                <img src="{% static 'img/agent1.jpg' %}" class="img-responsive">
+              </div>
+              <div class="fig-caption">
+                <h3>Haris Brown</h3>
+                <p class="marb-20">Sr. UI Designer</p>
+                <p>Follow me:</p>
+                <ul class="team-social">
+                  <li class="bgblue-dark"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li class="bgred"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li class="bgblue-light"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="bgblue-dark"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="team-info">
+              <div class="img-sec">
+                <img src="{% static 'img/agent2.jpg' %}" class="img-responsive">
+              </div>
+              <div class="fig-caption">
+                <h3>Emmy Brown</h3>
+                <p class="marb-20">Jr. UI Designer</p>
+                <p>Follow me:</p>
+                <ul class="team-social">
+                  <li class="blue-dark"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li class="red"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li class="blue-light"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="blue-dark"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>
